@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     })
 
-    $("#FILLWVARLATER").on("click", function(event){
+    $("#FILLWVAR").on("click", function(event){
         event.preventDefault()
         if(cert !==""){
           var cert = $("#cert").val();
@@ -15,10 +15,12 @@ $(document).ready(function(){
         if(genre !==""){
           var genre = $("#genre").val();
           var genreURL = "&with_genres="+genre}
+
         var pageNum = (Math.floor(Math.random()*10))+2
         var urlMovie = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&include_adult=false&include_video=true&page="+pageNum;
         var newURLmovie = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&include_adult=false&include_video=true&page="+pageNum
         $("#moviepost").empty()
+
         var check1 = [];
         console.log(newURLmovie)
         var movieShow = []
@@ -44,6 +46,7 @@ $(document).ready(function(){
                 movieShow.push(movieSel);
               }
             }
+
             posterImage(movieShow, response)
           })
         })
