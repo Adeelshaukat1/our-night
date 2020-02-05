@@ -1,0 +1,77 @@
+.navbar {
+    z-index: 900;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+}
+
+a.navbar-item {
+  cursor: pointer;
+  color: #0a0a0a;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.button.is-primary {
+  background-color: #9f6649;
+  border-color: transparent;
+  color: #fff;
+}
+
+
+.hero.is-success{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/assets/images/images.png");
+}
+
+
+.container {
+    margin-left: 30%;
+
+}
+
+
+.button-div {
+    margin-left: 7%;
+}
+
+.yes {
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-size: 28px;
+    padding: 15x;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.yes span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .yes span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .yes:hover span {
+    padding-right: 25px;
+  }
+  
+  .yes:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
