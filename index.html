@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Our Night</title>
-    
+    <title>Date Night Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    
     <link rel="stylesheet" href="assets/css/styles.css">
+   
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -46,20 +49,146 @@
       </nav>
 
 
-      <section class="hero is-success is-fullheight background">
+      <section id="section" class="hero is-success is-fullheight background">
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
               Would You like to watch a movie tonight?
             </h1>
-         <div class="button-div">
-            <button class="button yes is-black"><span>Yes</span></button>
-            <button class="button yes is-black"><span>No</span></button>
+
+
+
+
+        
+        <div class="placeholder"></div>
+  <div class="button-div">
+            <button id="btnYes" class="button yes is-black"><span>Yes</span></button>
+            <button id="btnNo" class="button yes is-black"><span>No</span></button>
         </div>
           </div>
         </div>
+
+
+        <!-- create buttons with dropdown for genre  -->
+
+        <div class="row cards-for-genre">
+          <div class="col s2">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Action</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        
+
+       
+          <div class="col s2">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Comedy</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        
+
+       
+          <div class="col s2">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Horror</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col s2">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Drama</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col s2">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Sci-Fi</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        
+
+        
+          <div class="col s2 ">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Family</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
       </section>
 
-<script src="assets/js/movies.js"></script>
+
+<script src="assets/js/test.js"></script>
 </body>
 </html>

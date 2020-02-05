@@ -20,10 +20,10 @@ a.navbar-item {
 }
 
 
-.hero.is-success{
+#section {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("/assets/images/images.png");
+    background-image: url("../images/images.png");
 }
 
 
@@ -74,4 +74,3 @@ a.navbar-item {
     opacity: 1;
     right: 0;
   }
-
