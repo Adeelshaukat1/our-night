@@ -8,7 +8,7 @@ $(document).ready(function(){
     })
 
     $(document).on("click", ".movieGenre",function(){
-      var movieID = $(this).attr("data-movieCert")
+      var movieID = $(this).attr("data-movieID")
       console.log (movieID)
     }) 
 
@@ -20,42 +20,54 @@ $(document).ready(function(){
         if(genre !==""){
           var genre = $("#genre").val();
           var genreURL = "&with_genres="+genre}
-
         var pageNum = (Math.floor(Math.random()*10))+2
-        var urlMovie = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&include_adult=false&include_video=true&page="+pageNum;
-        var newURLmovie = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&include_adult=false&include_video=true&page="+pageNum
+        var newURLmovie = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&region=US&include_adult=false&include_video=true&page="+pageNum
         $("#moviepost").empty()
-
-        var check1 = [];
         console.log(newURLmovie)
-        var movieShow = []
-        var repeatMovie = false
         $.ajax({
             url: newURLmovie,
             method: "GET",
           }).then(function(response){
-            var firstSel = Math.floor(Math.random()*20);
-            movieShow.push(firstSel);
-            for(i = 0; i < 4; i++){
-              var movieSel = Math.floor(Math.random()*20);
-              for(j = 0; j < movieShow.length; j++){
-                if(movieShow[j] === movieSel){
-                  var repeatMovie = true
-                }      
-              }
-              if(repeatMovie){
-                i--
-                repeatMovie= false
-              }
-              else{
-                movieShow.push(movieSel);
-              }
-            }
-
-            posterImage(movieShow, response)
+            console.log(response)
+            var titleCount = response.results.length;
+            var moviesPicked = uniqueFive(titleCount)
+            console.log(moviesPicked)
+            posterImage(moviesPicked, response)
           })
         })
+        function createRandom(n){
+          return Math.floor(Math.random()*n)
+        }
         
+        function uniqueFive(array){
+          var numArr = []
+          var movieShow = []
+          var maxNum = 5
+          for(i = 0; i < array; i++){
+            numArr.push(i)
+          }
+          console.log(numArr)
+          for(i = 0; i < numArr.length; i++){
+            var movieSel = createRandom(numArr.length)
+            var k = 0 
+            while (movieShow.length < maxNum){
+              if (movieSel === movieShow[k]){
+                movieSel = createRandom(numArr.length);
+                console.log(movieSel);
+                k = 0
+              }
+              else if (k === movieShow.length){
+                movieShow.push(movieSel);
+                break;
+              }
+              else{
+                k++;
+              }
+            }
+          }
+          return movieShow;
+        }        
+
         function posterImage(movie, sel){
           for(i=0; i <movie.length; i++){
             var select = movie[i];
