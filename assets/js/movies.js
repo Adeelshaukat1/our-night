@@ -7,9 +7,12 @@ $(document).ready(function(){
 
     })
 
-    $(document).on("click", ".movieGenre",function(){
+    $(".movieGenre").on("click",function(event){
+      event.preventDefault()
       var movieID = $(this).attr("data-movieID")
-      console.log (movieID)
+      console.log(movieID)
+      var movieCard = document.querySelector(".cards-for-genre")
+      movieCard.setAttribute("style", "display: none");
     }) 
 
     $("#FILLWVAR").on("click", function(event){
