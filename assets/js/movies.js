@@ -15,6 +15,16 @@ $(document).ready(function(){
       movieCard.setAttribute("style", "display: none");
     }) 
 
+
+    $(".movieCert").on("click",function(event){
+      event.preventDefault()
+      var movieCert = $(this).attr("data-movieCert")
+      var movieCertEl = document.querySelector(".cards-for-rating")
+      movieCertEl.setAttribute("style", "display: none");
+    }) 
+
+
+
     $("#FILLWVAR").on("click", function(event){
         event.preventDefault()
         if(cert !==""){
