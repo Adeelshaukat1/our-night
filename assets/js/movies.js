@@ -7,6 +7,11 @@ $(document).ready(function(){
 
     })
 
+    $(document).on("click", ".movieGenre",function(){
+      var movieID = $(this).attr("data-movieCert")
+      console.log (movieID)
+    }) 
+
     $("#FILLWVAR").on("click", function(event){
         event.preventDefault()
         if(cert !==""){
