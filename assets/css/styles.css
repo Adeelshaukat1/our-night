@@ -1,9 +1,9 @@
 .navbar {
-    z-index: 900;
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
+  z-index: 900;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
 }
 
 a.navbar-item {
@@ -19,97 +19,90 @@ a.navbar-item {
   color: #fff;
 }
 
-
 #section {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../images/images.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/images.png");
 }
-
 
 .container {
-    margin-left: 30%;
-
+  margin-left: 30%;
 }
 
-
 .button-div {
-    margin-left: 7%;
+  margin-left: 7%;
 }
 
 .yes {
-    border-radius: 4px;
-    border: none;
-    text-align: center;
-    font-size: 28px;
-    padding: 15x;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 15x;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
-
 
 .yes span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .yes span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .yes:hover span {
-    padding-right: 25px;
-  }
-  
-  .yes:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-  .card-image img{
-    width: 200px;
-    height: 200px;
-  }
-
-
-  .row .col.s2 {
-    width: 32.666667%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-
-  .row {
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* margin-bottom: 20px; */
-    /* float: left; */
-    /* border-spacing: initial; */
-    /* margin: 0 auto; */
-    margin-bottom: 20%;
+.yes span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-  .card .card-image .card-title {
-    color: #fafafa;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    max-width: 100%;
-    padding: 24px;
-    font-family: sans-serif;
-    font-weight: 900;
-    /* margin: 0 auto; */
-    /* margin-bottom: 50px; */
+.yes:hover span {
+  padding-right: 25px;
+}
+
+.yes:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.card-image img {
+  width: 200px;
+  height: 200px;
+}
+
+.row .col.s2 {
+  width: 32.666667%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+
+.row {
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* margin-bottom: 20px; */
+  /* float: left; */
+  /* border-spacing: initial; */
+  /* margin: 0 auto; */
+  margin-bottom: 20%;
+}
+
+.card .card-image .card-title {
+  color: #fafafa;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 24px;
+  font-family: sans-serif;
+  font-weight: 900;
+  /* margin: 0 auto; */
+  /* margin-bottom: 50px; */
 }
 
 card .card-image {
@@ -117,5 +110,133 @@ card .card-image {
   height: 200px;
   /* object-fit: cover; */
   /* width: 238px; */
+}
+
+
+.cards-for-genre {
+  cursor: pointer;
+}
+
+#actionCard { 
+  transition: all .2s ease-in-out;
+ }
+
+#actionCard:hover {
+   transform: scale(1.07);
+   }
+
+#comedyCard { 
+    transition: all .2s ease-in-out; 
+  }
+
+#comedyCard:hover { 
+  transform: scale(1.07);
+ }
+
+#horrorCard { 
+  transition: all .2s ease-in-out; 
+}
+#horrorCard:hover { 
+  transform: scale(1.07);
+ }
+
+#dramaCard {
+   transition: all .2s ease-in-out; 
+  }
+
+#dramaCard:hover {
+   transform: scale(1.07); 
+  }
+#scifiCard {
+   transition: all .2s ease-in-out; 
+  }
+#scifiCard:hover { 
+  transform: scale(1.07);
+ }
+
+#familyCard { 
+  transition: all .2s ease-in-out; 
+}
+
+#familyCard:hover { 
+  transform: scale(1.07); 
+}
+
+
+/* select rating styles */
+
+
+
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit
+}
+.container {
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center
+}
+
+/*Styling Selections for food*/
+
+
+
+.food-button {
+  background-color: #000000;
+  border-color: transparent;
+  color: #fff;
+}
+
+.food-question {
+  margin: 0 auto;
+}
+
+.food-button{
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 15x;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  height: 60px;
+  margin: 5px;
+  margin-bottom: 320px;
+}
+
+.food-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.food-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.food-button:hover span {
+  padding-right: 25px;
+}
+
+.food-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.diet-question{
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
 }
 

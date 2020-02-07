@@ -1,5 +1,40 @@
-$("#confirmButton").click(function(event) {
+$(".food-button").on("click", function(){
+    $(".title").hide();
+    $(".food-button").hide();
+    showFoodOptions();
+})
+
+
+function showFoodOptions(){
+    $(".cards-for-cuisines").show();
+}
+
+ $(".foodCuisine").on("click",function(event){
     event.preventDefault();
+    var foodType = $(this).attr("data-foodCuisine")
+    var foodTypeEl = document.querySelector(".cards-for-cuisines")
+    foodTypeEl.setAttribute("style", "display: none");
+    $(".cards-for-diet").show();
+    console.log(foodType)
+  })
+
+
+  $(".foodDiet").on("click",function(event){
+    event.preventDefault();
+    var foodDiet = $(this).attr("data-foodDiet")
+    console.log(foodDiet)
+    var foodDietEl = document.querySelector(".cards-for-diets")
+    foodDietEl.setAttribute("style", "display: none");
+    // $(".cards-for-diet").show();
+   
+  })
+
+
+
+$("#confirmButton").click(function(event) {
+    
+    event.preventDefault();
+
 
     var intolerances = $("#intolerance").val();
     var cuisine = $("#cuisine").val();
@@ -26,3 +61,4 @@ $("#confirmButton").click(function(event) {
     });
 
     })
+
