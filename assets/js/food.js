@@ -38,71 +38,67 @@
         $(".images").append(newImage);
         })})
     
+    
+    
+    
+    
+    
+    
+    
+        
         // NO PREFERENCE AJAX CALL!
         $("#noPreference").click(function(event) {
         event.preventDefault();
-
         
-        
+        // Add variables to query the search
+        var cuisine = $("#cuisine").val();
+        var diet = $("#diet").val();
+        console.log(cuisine);
+        var tags = cuisine + ',' + diet;
+        console.log(tags)
         // Get 5 random recipies
-        var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=3&apiKey=487918d7ad3042b090e2c9dec14801c7";
+        var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=5&tags=" + tags + "&apiKey=487918d7ad3042b090e2c9dec14801c7";
     
         $.ajax({
         method: "GET",
         url: noPreferenceURL    
         }).then(function(response) {
-            console.log(response);
-            console.log(response.recipes.length);
+        console.log("This is the response object!!");
+        console.log(response);
+        console.log("----------------------")
     
         for (var i = 0; i < response['recipes'].length; i++) {
             var image = response['recipes'][i].image;
             var sourceURL = response['recipes'][i].sourceUrl;
             var titleText = response['recipes'][i].title;
-            console.log(image);
-            console.log(sourceURL);
-            console.log(titleText);
-    
+            console.log("Here is food #" + i + 1);
+            console.log("DIET:")
+            console.log(response['recipes'][i]['diets']);
+            console.log("CUISINE:")
+            console.log(response['recipes'][i]['cuisines']);
+            console.log("----------------------------")
             var title = $("<h1>");
             title = title.text(titleText);
             $(".images").append(title);
-            console.log(title);
     
             var a = $("<a>");
                 a = a.attr("href", sourceURL);
                 a = a.attr("target", "_blank");
                 $(".images").append(a);
-                console.log(a)
+    
             
             var newImage = $("<img>");
                 newImage = newImage.attr("src", image);
                 a.append(newImage);
         }
     
-        // Store variables from response
-        var image = response['recipes'][0].image;
-        var sourceURL = response['recipes'][0].sourceUrl;
-        var titleText = response['recipes'][0].title;
-    
-        // Incorporate title into picture as well
-        var title = $("<h1>");
-        title = title.text(titleText);
-        $(".images").append(title);
-    
-    
-        // Create link for picture
-        var a = $("<a>");
-        a = a.attr("href", sourceURL);
-        a = a.attr("target","_blank");
-        $(".images").append(a);
-    
-        // Link picture to the document
-        var newImage = $("<img>");
-        newImage = newImage.attr("src", image);
-        a.append(newImage);
-    
     
         
         
         })
         })
+    
+    
+    
+    
     
