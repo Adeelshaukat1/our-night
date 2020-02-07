@@ -9,13 +9,16 @@ function showFoodOptions(){
     $(".cards-for-cuisines").show();
 }
 
+var foodType = '';
+
  $(".foodCuisine").on("click",function(event){
     event.preventDefault();
     var foodType = $(this).attr("data-foodCuisine")
     var foodTypeEl = document.querySelector(".cards-for-cuisines")
     foodTypeEl.setAttribute("style", "display: none");
     $(".cards-for-diet").show();
-    console.log(foodType)
+    console.log(foodType);
+    return foodType;
   })
 
 
@@ -26,8 +29,36 @@ function showFoodOptions(){
     var foodDietEl = document.querySelector(".cards-for-diets")
     foodDietEl.setAttribute("style", "display: none");
     // $(".cards-for-diet").show();
+    var tags = foodType + ',' + foodDiet;
+    // Get 5 random recipies
+    var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=5&tags=" + tags + "&apiKey=487918d7ad3042b090e2c9dec14801c7";
+    
+        $.ajax({
+        method: "GET",
+        url: noPreferenceURL    
+        }).then(function(response) {
+    
+        for (var i = 0; i < response['recipes'].length; i++) {
+            var image = response['recipes'][i].image;
+            var sourceURL = response['recipes'][i].sourceUrl;
+            var titleText = response['recipes'][i].title;
+            console.log(image);
+            console.log(sourceURL);
+            console.log(titleText);
+
+            var title = $("<h1>");
+            title = title.text(titleText);
+    
+            var a = $("<a>");
+                a = a.attr("href", sourceURL);
+                a = a.attr("target", "_blank");
+
+    
+            
+            var newImage = $("<img>");
+                newImage = newImage.attr("src", image);
    
-  })
+  }})
 
 
 
@@ -61,4 +92,4 @@ $("#confirmButton").click(function(event) {
     });
 
     })
-
+  })
