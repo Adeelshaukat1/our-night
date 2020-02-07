@@ -1,3 +1,24 @@
 *,*::before, *::after {
     box-sizing: border-box
 }
+
+h1 {
+    text-align: center;
+    color:  rgb(24, 12, 39)
+}
+
+body {
+    background-color: rgb(165, 124, 70);
+}
+
+h2 {
+    color:   rgb(49, 25, 80);
+}
+
+h3 {
+    color:  rgb(114, 39, 124);
+}
+
+h4 {
+    color:   rgb(71, 32, 104);
+}
