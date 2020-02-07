@@ -18,13 +18,16 @@ $(document).ready(function(){
 })
 
 //when user clicks genre run this function
+
 var movieID = ""
+
 
 $(".movieType").on("click",function(event){
     event.preventDefault();
     $("#section").css("background-image", "url(assets/images/landscape-1328858_1920.png)")
     $(".cards-for-rating").show();
     $(".title").text("Please select the rating: ")
+
     movieID = $(this).attr("data-movieID")
     console.log(movieID)
     var movieCard = document.querySelector(".cards-for-genre")
