@@ -28,6 +28,9 @@ $(".movieType").on("click",function(event){
     $(".cards-for-rating").show();
     $(".title").text("Please select the rating: ")
 
+
+
+
     movieID = $(this).attr("data-movieID")
     console.log(movieID)
     var movieCard = document.querySelector(".cards-for-genre")

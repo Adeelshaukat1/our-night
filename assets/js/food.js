@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(".food-button").on("click", function(){
     $(".title").hide();
     $(".food-button").hide();
@@ -94,5 +94,3 @@ $("#confirmButton").click(function(event) {
 
     })
   })
-=======
->>>>>>> master
