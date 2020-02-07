@@ -41,9 +41,11 @@
         // NO PREFERENCE AJAX CALL!
         $("#noPreference").click(function(event) {
         event.preventDefault();
+
+        
         
         // Get 5 random recipies
-        var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=5&apiKey=487918d7ad3042b090e2c9dec14801c7";
+        var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=3&apiKey=487918d7ad3042b090e2c9dec14801c7";
     
         $.ajax({
         method: "GET",
