@@ -7,7 +7,7 @@ $(".food-button").on("click", function(){
 
 
 function showFoodOptions(){
-    $("#section").css("background-image", "url()")
+    $("#section").css("background-image", "url(assets/images/dinnerbackground.jpg)")
 
     $(".cards-for-cuisines").show();
 }

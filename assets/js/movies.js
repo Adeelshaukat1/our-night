@@ -61,7 +61,7 @@ $(".movieCert").on("click",function(event,){
     $(".food-question").show();
     event.preventDefault();
     
-    $("#section").css("background-image", "url()")
+    $("#section").css("background-image", "url(https://cdn.pixabay.com/photo/2015/06/27/16/34/wall-823611_1280.jpg)")
     $(".title").text("Are you interested in making a delicious dinner tonight?")
 
     var movieCert = $(this).attr("data-movieCert")

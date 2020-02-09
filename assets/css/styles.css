@@ -403,3 +403,68 @@ span.choose {
 
 }
 
+.alcohol-question {
+margin: 0 auto;
+}
+
+.alcohol-question {
+  margin-bottom: 40%;
+}
+
+
+.alcohol-heading {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+.button-wrapper {
+  margin-left: 55px;
+}
+
+.yer {
+  background-image: url("https://cybra.com/wp-content/uploads/2019/06/dark-gray-background-soft-fifteen-shades-of-grey-smooth-background-with-the-addition-of-a-bit-of-noise_bvu2c-5qtg_thumbnail-full01.png")
+}
+
+/* this is buttons for alcohol questions */
+
+.alcohol-question {
+  margin-left: 30%;
+}
+
+.newButton {
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 15x;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.newButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.newButton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.newButton:hover span {
+  padding-right: 25px;
+}
+
+.newButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
