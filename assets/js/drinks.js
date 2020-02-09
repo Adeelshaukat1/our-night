@@ -7,6 +7,8 @@ $("#buttonAlcohol-2").on("click", function(){
     $(".alcohol-question").hide();
     $(".cards-for-alcohol").hide();
     $(".results-page").show();
+    $(".title").text("Here are some suggestions:")
+    $(".title").show()
 })
 
 $(".alcoholPref").on("click", function(){
@@ -15,6 +17,8 @@ $(".alcoholPref").on("click", function(){
     $(".cards-for-alcohol").hide();
     getDrink(alcoholType)
     $(".results-page").show();
+    $(".title").text("Here are some suggestions:")
+    $(".title").show()
 })
 
 function getDrink(userChoice) {
