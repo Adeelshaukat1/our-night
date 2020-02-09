@@ -80,9 +80,10 @@ $(".movieCert").on("click",function(event,){
     movieCertEl.setAttribute("style", "display: none");
     console.log(movieCert);
     console.log(movieID)
+    var pageNum = (Math.floor(Math.random()*10))+2
     var genreURL = "&with_genres="+movieID;
     var certURL = "&certification_country=US&certification="+movieCert;
-    var movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&region=US&include_adult=false&include_video=true&page=1"
+    var movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=f6d55af2d8f9fea21ad4afda60e788bf&language=en-US"+certURL+genreURL+"&region=US&include_adult=false&include_video=true&page="+pageNum
     console.log(movieURL)
     $.ajax({
         url: movieURL,
