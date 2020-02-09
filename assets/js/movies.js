@@ -132,6 +132,7 @@ function createRandom(n){
   
   function posterImage(movie, sel){
     for(i=0; i <movie.length; i++){
+      var movielinks = [];
       var select = movie[i];
       var link = $("<a>")
       var movieTitle = sel.results[select].title
@@ -143,8 +144,11 @@ function createRandom(n){
       movieImg.attr("src", posterURL)
       link.attr("href", search)
       link.attr("target", "_blank")
-      $(link).append(movieImg)
-      $("#moviepost").append(link)
+      movielinks.push(posterURL);
+      $(link).append(movieImg);
+      $("#moviepost").append(link);
+      console.log(movielinks);
+      $(".moviez").append(link);
     }
   }
 })

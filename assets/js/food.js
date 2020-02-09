@@ -41,7 +41,7 @@ var foodType = '';
     // $(".cards-for-diet").show();
     var tags = foodType + ',' + foodDiet;
     // Get 5 random recipies
-    var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=5&tags=" + tags + "&apiKey=487918d7ad3042b090e2c9dec14801c7";
+    var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=3&tags=" + tags + "&apiKey=8e47f90abd35402ba25d450aad6b4fc6";
     $(".alcohol-question").show();
         $.ajax({
         method: "GET",
@@ -56,17 +56,21 @@ var foodType = '';
             console.log(sourceURL);
             console.log(titleText);
 
-            var title = $("<h1>");
+            var title = $("<h2>");
             title = title.text(titleText);
+            $(".foodz").append(title);
     
             var a = $("<a>");
                 a = a.attr("href", sourceURL);
                 a = a.attr("target", "_blank");
+                title.append(a);
 
     
             
             var newImage = $("<img>");
                 newImage = newImage.attr("src", image);
+                a.append(newImage);
+
    
   }})
 

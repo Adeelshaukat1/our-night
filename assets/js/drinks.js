@@ -7,7 +7,7 @@ $("#buttonAlcohol-2").on("click", function(){
     $(".alcohol-question").hide();
     $(".cards-for-alcohol").hide();
     $(".results-page").show();
-    $(".title").text("Here are some suggestions:")
+    $(".title").text("Here are our recommendations for your night. Thank you!")
     $(".title").show()
 })
 
@@ -17,7 +17,7 @@ $(".alcoholPref").on("click", function(){
     $(".cards-for-alcohol").hide();
     getDrink(alcoholType)
     $(".results-page").show();
-    $(".title").text("Here are some suggestions:")
+    $(".title").text("Here are our recommendations for your night. Thank you!")
     $(".title").show()
 })
 
@@ -57,12 +57,14 @@ function getInfo(alcohol){
     if (drinkImg) {
         var img = $("<img>")
         img.attr("src", drinkImg)
+        $(".drinkz").append(img);
     }
     let instr = alcohol.drinks[0].strInstructions
     console.log(instr);
     if (instr) {
         var instrDiv = $("<p>")
         instrDiv.text(instr)
+        $(".drinkz").append(instrDiv);
     }
     let totalIngredients = []
     let totalMeasure = []
@@ -77,8 +79,10 @@ function getInfo(alcohol){
         console.log(ingredientSt)
         var ingredLi = $("<li>")
         $(ingredLi).text(ingredientSt)
+        $(".drinkz").append(ingredLi);
         var measureLi = $("<li>")
         $(measureLi).text(measureSt)
+        $(".drinkz").append(measureLi);
       }
     }
     console.log(totalIngredients)
