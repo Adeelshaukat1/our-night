@@ -1,10 +1,15 @@
 // do you want food or not
 $(".food-button").on("click", function(){
-    $(".title").hide();
-    $(".food-button").hide();
-    showFoodOptions();
-})
-
+    var wantFood= $(this).attr("data-foodQuest")
+    if (wantFood === "yes"){
+      showFoodOptions
+    }
+    else{
+        $(".food-question").hide()
+        $(".alcohol-question").show()
+        $(".title").hide()
+    }
+  })
 
 function showFoodOptions(){
     $("#section").css("background-image", "url(assets/images/dinnerbackground.jpg)")

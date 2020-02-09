@@ -15,8 +15,21 @@ $(document).ready(function(){
       $(".is-rounded").hide();
       $(".cards-for-rating").hide();
   }
-  $(".yes").on("click", showHide);
-})
+
+  $(".moviebutton").on("click", function(){
+    var wantMovie = $(this).attr("data-movieQuest")
+    if (wantMovie === "yes"){
+      showHide()
+    }
+    else{
+      $(".food-question").show()
+      $(".title").text("Are you interested in making a delicious dinner tonight?")
+      $(".button-div").hide()
+      $("#section").css("background-image", "url(https://cdn.pixabay.com/photo/2015/06/27/16/34/wall-823611_1280.jpg)")
+      $(".is-rounded").hide();
+    }
+  })
+
 
 //when user clicks genre run this function
 
@@ -60,10 +73,8 @@ console.log(movieID)
 $(".movieCert").on("click",function(event,){
     $(".food-question").show();
     event.preventDefault();
-    
     $("#section").css("background-image", "url(https://cdn.pixabay.com/photo/2015/06/27/16/34/wall-823611_1280.jpg)")
     $(".title").text("Are you interested in making a delicious dinner tonight?")
-
     var movieCert = $(this).attr("data-movieCert")
     var movieCertEl = document.querySelector(".cards-for-rating")
     movieCertEl.setAttribute("style", "display: none");
@@ -135,3 +146,4 @@ function createRandom(n){
       $("#moviepost").append(link)
     }
   }
+})
