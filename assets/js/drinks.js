@@ -14,54 +14,51 @@ $(".alcoholPref").on("click", function(){
     getDrink(alcoholType)
 })
 
-var userChoice = $("#user-choice").val()
-var currentDrink;
-var drinkImg;
-var instr;
-
 function getDrink(userChoice) {
+    console.log(userChoice)
     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+    var choice = userChoice
+    console.log(choice)
+    var currentDrink;
+    var drinkImg;
+    var instr;
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (alcohol) {
-        drinkImg = alcohol.drinks[0].strDrinkThumb
         console.log(drinkImg);
-        instr = alcohol.drinks[0].strInstructions
         var octane = alcohol.drinks[0].strAlcoholic
-        // console.log(alcohol)
         console.log(octane);
-        // console.log(alcohol);
-        if (userChoice === "nonalcoholic" && octane !== "Alcoholic" && octane !== "Optional alcohol") {
+        console.log(choice)
+        if (choice === "nonalcoholic" && octane !== "Alcoholic" && octane !== "Optional alcohol") {
             getInfo(alcohol)
             return
-        } else if (userChoice === "alcoholic" && octane === "Alcoholic") {
+        } else if (choice === "alcoholic" && octane === "Alcoholic") {
             getInfo(alcohol)
             return
         }
-        console.log(currentDrink);
-        getDrink(event);
+        getDrink(choice);
     });
 };
 
 
 function getInfo(alcohol){
-    currentDrink = alcohol
+    console.log(alcohol)
+    var drink = alcohol.drinks[0]
+    let drinkImg = drink.strDrinkThumb
+    console.log(drinkImg)
     if (drinkImg) {
         var img = $("<img>")
         img.attr("src", drinkImg)
-        img.appendTo(".img-here")
     }
+    let instr = alcohol.drinks[0].strInstructions
     console.log(instr);
     if (instr) {
         var instrDiv = $("<p>")
         instrDiv.text(instr)
-        console.log(instrDiv.text)
-        instrDiv.appendTo(".img-here")
     }
     let totalIngredients = []
     let totalMeasure = []
-    var drink = alcohol.drinks[0]
     for(var i= 1 ; i < 16; i++){
       var ingredientSts = "strIngredient"+i
       var ingredientSt = drink[ingredientSts]
@@ -73,12 +70,10 @@ function getInfo(alcohol){
         console.log(ingredientSt)
         var ingredLi = $("<li>")
         $(ingredLi).text(ingredientSt)
-        $("#ingredients").append(ingredLi)
         var measureLi = $("<li>")
         $(measureLi).text(measureSt)
-        $("#measurements").append(measureLi)
-        }
       }
-console.log(totalIngredients)
-console.log(totalMeasure)
+    }
+    console.log(totalIngredients)
+    console.log(totalMeasure)
 }
