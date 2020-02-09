@@ -162,8 +162,8 @@
 
 
   <div class="food-question">
-    <button class="food-button" data-foodQuest = "yes"><span class="btn-span">Yes</span></button>
-    <button class="food-button" data-foodQuest = "no"><span class="btn-span">No</span></button>
+    <button class="food-button foodQuest" data-foodQuest = "yes"><span class="btn-span">Yes</span></button>
+    <button class="food-button foodQuest" data-foodQuest = "no"><span class="btn-span">No</span></button>
   </div>
 
 
@@ -287,12 +287,14 @@
       Would you like a drink?
     </h1><br>
     <div class="button-wrapper">
-      <button id="buttonAlcohol-1" class="button is-black style-for-alcohol">
+      <button id="buttonAlcohol-1" class="food-button" data-foodQuest = "yes"><span class="btn-span">Yes</span></button>
+      <button id="buttonAlcohol-2" class="food-button" data-foodQuest = "no"><span class="btn-span">No</span></button>
+      <!-- <button id="buttonAlcohol-1" class="button is-black style-for-alcohol">
         <span>Yes</span>
       </button>
-      <button id="buttonAlcohol-2" class="button is-black style-for-alcohol">
+      <button  class="button is-black style-for-alcohol">
         <span>No</span>
-      </button>
+      </button> -->
     </div>
   </div>
 

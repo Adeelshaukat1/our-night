@@ -1,5 +1,5 @@
 // do you want food or not
-$(".food-button").on("click", function(){
+$(".foodQuest").on("click", function(){
     var wantFood= $(this).attr("data-foodQuest")
     if (wantFood === "yes"){
       $(".food-question").hide()
