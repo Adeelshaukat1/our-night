@@ -43,6 +43,7 @@ var foodType = '';
     // Get 5 random recipies
     var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=3&tags=" + tags + "&apiKey=8e47f90abd35402ba25d450aad6b4fc6";
     $(".alcohol-question").show();
+    $("#section").css("background-image", "url(assets/images/tiki.jpg)")
         $.ajax({
         method: "GET",
         url: noPreferenceURL    

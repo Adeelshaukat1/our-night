@@ -468,3 +468,29 @@ margin: 0 auto;
   opacity: 1;
   right: 0;
 }
+
+.resultcolumn {
+  background-color: black;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.results-page h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.results-page h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.results-page img {
+  margin: 20px 0;
+}
+
+.results-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
