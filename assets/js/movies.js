@@ -121,16 +121,17 @@ function createRandom(n){
   function posterImage(movie, sel){
     for(i=0; i <movie.length; i++){
       var select = movie[i];
+      var link = $("<a>")
+      var movieTitle = sel.results[select].title
       var picURL = sel.results[select].poster_path
       var posterURL = "http://image.tmdb.org/t/p/w154/"+picURL
       console.log(posterURL)
       var movieImg = $("<img>")
+      var search = "https://www.google.com/search?q="+movieTitle+"%20movie"
       movieImg.attr("src", posterURL)
+      link.attr("href", search)
+      link.attr("target", "_blank")
+      $(link).append(movieImg)
+      $("#moviepost").append(link)
     }
   }
-
-
-
-
-
-
