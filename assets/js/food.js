@@ -2,9 +2,11 @@
 $(".food-button").on("click", function(){
     var wantFood= $(this).attr("data-foodQuest")
     if (wantFood === "yes"){
-      showFoodOptions
+      $(".food-question").hide()
+      showFoodOptions()
+      $(".title").hide()
     }
-    else{
+    else if (wantFood === "no"){
         $(".food-question").hide()
         $(".alcohol-question").show()
         $(".title").hide()
