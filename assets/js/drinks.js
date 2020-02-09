@@ -7,3 +7,12 @@ $("#buttonAlcohol-2").on("click", function(){
     $(".cards-for-alcohol").hide();
 })
 
+$(".alcoholPref").on("click", function(){
+    var alcoholType = $(this).attr("data-alcohol")
+    console.log(alcoholType)
+    $(".cards-for-alcohol").hide();
+    $(".results-page").show();
+})
+
+
+
