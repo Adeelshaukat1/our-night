@@ -1,4 +1,4 @@
-
+// do you want food or not
 $(".food-button").on("click", function(){
     $(".title").hide();
     $(".food-button").hide();
@@ -7,17 +7,19 @@ $(".food-button").on("click", function(){
 
 
 function showFoodOptions(){
+    $("#section").css("background-image", "url()")
+
     $(".cards-for-cuisines").show();
 }
 
 var foodType = '';
-
+// this is where when you clock on cuisine it chgnes to diet 
  $(".foodCuisine").on("click",function(event){
     event.preventDefault();
     var foodType = $(this).attr("data-foodCuisine")
     var foodTypeEl = document.querySelector(".cards-for-cuisines")
     foodTypeEl.setAttribute("style", "display: none");
-    $(".cards-for-diet").show();
+    $(".cards-for-diets").show();
     console.log(foodType);
     return foodType;
   })
@@ -33,7 +35,7 @@ var foodType = '';
     var tags = foodType + ',' + foodDiet;
     // Get 5 random recipies
     var noPreferenceURL = "https://api.spoonacular.com/recipes/random?number=5&tags=" + tags + "&apiKey=487918d7ad3042b090e2c9dec14801c7";
-    
+    $(".alcohol-question").show();
         $.ajax({
         method: "GET",
         url: noPreferenceURL    

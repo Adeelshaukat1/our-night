@@ -1,20 +1,20 @@
 $(document).ready(function(){
-    $(".cards-for-cuisines").hide();
-    $(".cards-for-genre").hide();
-    $(".cards-for-rating").hide();
-    $(".food-question").hide();
-    $(".cards-for-diet").hide();
-
-    function showHide(){
-        $("#section").css("background-image", "url(assets/images/landscape-1328858_1920.png)")
-        $(".title").text("Please select the following genre:");
-        $(".yes").hide();
-        $(".cards-for-genre").show();
-        $(".is-rounded").hide();
-        $(".cards-for-rating").hide();
-    }
-    $(".yes").on("click", showHide);
-
+  $(".cards-for-cuisines").hide();
+  $(".cards-for-genre").hide();
+  $(".cards-for-rating").hide();
+  $(".food-question").hide();
+  $(".cards-for-diets").hide();
+  $(".alcohol-question").hide();
+  $(".cards-for-alcohol").hide();
+  function showHide(){
+      $("#section").css("background-image", "url(assets/images/landscape-1328858_1920.png)")
+      $(".title").text("Please select the following genre:");
+      $(".yes").hide();
+      $(".cards-for-genre").show();
+      $(".is-rounded").hide();
+      $(".cards-for-rating").hide();
+  }
+  $(".yes").on("click", showHide);
 })
 
 //when user clicks genre run this function
@@ -54,7 +54,7 @@ $('.dropdown .dropdown-menu li').click(function () {
 
 });
 /*start the selection of rating*/
-
+// asks you if you want dinner
 console.log(movieID)
 $(".movieCert").on("click",function(event,){
     $(".food-question").show();
