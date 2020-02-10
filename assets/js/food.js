@@ -7,9 +7,10 @@ $(".foodQuest").on("click", function(){
       $(".title").hide()
     }
     else if (wantFood === "no"){
-        $(".food-question").hide()
-        $(".alcohol-question").show()
-        $(".title").hide()
+      $("#section").css("background-image", "url(assets/images/tiki.jpg)")
+      $(".food-question").hide()
+      $(".alcohol-question").show()
+      $(".title").hide()
     }
   })
 
