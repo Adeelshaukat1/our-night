@@ -20,23 +20,22 @@ function showFoodOptions(){
     $(".cards-for-cuisines").show();
 }
 
-var foodType = '';
+var foodType;
 // this is where when you clock on cuisine it chgnes to diet 
  $(".foodCuisine").on("click",function(event){
     event.preventDefault();
-    var foodType = $(this).attr("data-foodCuisine")
+    foodType = $(this).attr("data-foodCuisine")
     var foodTypeEl = document.querySelector(".cards-for-cuisines")
     foodTypeEl.setAttribute("style", "display: none");
     $(".cards-for-diets").show();
-    console.log(foodType);
-    return foodType;
   })
 
-
+console.log(foodType)
   $(".foodDiet").on("click",function(event){
     event.preventDefault();
     var foodDiet = $(this).attr("data-foodDiet")
     console.log(foodDiet)
+    console.log(foodType)
     var foodDietEl = document.querySelector(".cards-for-diets")
     foodDietEl.setAttribute("style", "display: none");
     // $(".cards-for-diet").show();
